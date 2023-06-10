@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE143D55-E236-47FF-9EB3-2B7C8A366414}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Easy_AddedTraffic_AddOns</RootNamespace>
+    <AssemblyName>Easy AddedTraffic AddOns</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>plague_13b_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddedTrafficConfig.cs" />
+    <Compile Include="CarPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarPopup.Designer.cs">
+      <DependentUpon>CarPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\AwcFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\Builders\YndBuilder.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\Builders\YnvBuilder.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\CacheDatFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\CarColsFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\CarModColsFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\CarVariationsFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\CutFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\DistantLightsFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\DlcContentFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\DlcSetupFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\FxcFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\GtxdFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\Gxt2File.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\HeightmapFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\JPsoFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\MrfFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\PedFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\PedsFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\RelFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\Stats.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\VehicleLayoutsFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\VehiclesFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\WatermapFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YbnFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YcdFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YddFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YdrFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YedFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YfdFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YftFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YldFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YmapFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YmfFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YmtFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YndFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YnvFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YpdbFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YptFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YtdFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YtypFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YvrFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\FileTypes\YwrFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\GameFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\GameFileCache.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\Archetype.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\Meta.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\MetaBuilder.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\MetaNames.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\MetaTypes.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\MetaXml.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\Pso.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\PsoBuilder.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\PsoTypes.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\Rbf.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\XmlMeta.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\XmlPso.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\MetaTypes\XmlRbf.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Bounds.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Clip.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Clothes.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Drawable.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Expression.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Filter.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Frag.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Nav.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Node.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Particle.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\ResourceAnalyzer.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\ResourceBaseTypes.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\ResourceBuilder.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\ResourceData.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\ResourceFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\ShaderParams.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\Texture.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\VehicleRecord.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\VertexType.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Resources\WaypointRecord.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\RpfFile.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\RpfManager.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Utils\Data.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Utils\DDSIO.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Utils\GTACrypto.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Utils\GTAKeys.cs" />
+    <Compile Include="CodeWalker.Core\GameFiles\Utils\Jenk.cs" />
+    <Compile Include="CodeWalker.Core\Utils\BoundingBoxes.cs" />
+    <Compile Include="CodeWalker.Core\Utils\Cache.cs" />
+    <Compile Include="CodeWalker.Core\Utils\Fbx.cs" />
+    <Compile Include="CodeWalker.Core\Utils\FbxConverter.cs" />
+    <Compile Include="CodeWalker.Core\Utils\Matrices.cs" />
+    <Compile Include="CodeWalker.Core\Utils\Quaternions.cs" />
+    <Compile Include="CodeWalker.Core\Utils\TriangleBVH.cs" />
+    <Compile Include="CodeWalker.Core\Utils\Utils.cs" />
+    <Compile Include="CodeWalker.Core\Utils\Vectors.cs" />
+    <Compile Include="CodeWalker.Core\Utils\Xml.cs" />
+    <Compile Include="CodeWalker.Core\World\AudioZones.cs" />
+    <Compile Include="CodeWalker.Core\World\Camera.cs" />
+    <Compile Include="CodeWalker.Core\World\Clouds.cs" />
+    <Compile Include="CodeWalker.Core\World\Entity.cs" />
+    <Compile Include="CodeWalker.Core\World\Heightmaps.cs" />
+    <Compile Include="CodeWalker.Core\World\Ped.cs" />
+    <Compile Include="CodeWalker.Core\World\PopZones.cs" />
+    <Compile Include="CodeWalker.Core\World\Scenarios.cs" />
+    <Compile Include="CodeWalker.Core\World\Space.cs" />
+    <Compile Include="CodeWalker.Core\World\Timecycle.cs" />
+    <Compile Include="CodeWalker.Core\World\TimecycleMods.cs" />
+    <Compile Include="CodeWalker.Core\World\Trains.cs" />
+    <Compile Include="CodeWalker.Core\World\Vehicle.cs" />
+    <Compile Include="CodeWalker.Core\World\Water.cs" />
+    <Compile Include="CodeWalker.Core\World\Watermaps.cs" />
+    <Compile Include="CodeWalker.Core\World\Weapon.cs" />
+    <Compile Include="CodeWalker.Core\World\Weather.cs" />
+    <Compile Include="UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Designer.cs">
+      <DependentUpon>UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CarPopup.resx">
+      <DependentUpon>CarPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI.resx">
+      <DependentUpon>UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CodeWalker.Core\Resources\magic.dat" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\magic.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plague_13b_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
